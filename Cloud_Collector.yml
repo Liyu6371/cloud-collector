@@ -1,0 +1,44 @@
+logger:
+  level: error #日志级别
+  path: /var/log/gse/cloud_collector.log
+socket:
+  socket_path: /var/run/ipc.state.report
+  queue_buffer: 2000
+  worker: 3
+cloud_collect_task:
+  win_stack:
+    concurrency: 50
+    clouds:
+      - id: 1
+        period: 1m
+        timeout: 1m
+        account: admin
+        password: passw0rd
+        server: 10.1.36.37
+        cluster:
+          data_id: 1500016
+          instances:
+            - fa894955-dd77-4f87-837e-18f834f324dd
+        host:
+          data_id: 1500016
+          instances:
+            - 476bce3f-1875-4ee0-b7fb-3344348f25a2
+            - 822089a2-57fc-4ff7-a961-7176c176af3a
+            - a1573591-0c44-478a-9aa6-ccbde36b19e1
+            - b25985cd-6dc2-4009-b908-da6ea9c8cc86
+            - dce0c08f-1919-489f-8bf0-fdb241e19850
+            - e51e47e2-a2b4-4c17-a29a-0066803cf7a4
+        storage:
+          data_id: 1500016
+          instances:
+            - 09c91ca1-fb82-4e8e-b195-e3f32abaf3b0
+            - 17df8cba-5183-493f-80dc-e6bf204a1068
+            - 1e2e59bd-d64b-473b-927e-06f7f6610ede
+        vm:
+          data_id: 1500016
+          instances:
+            - 0127e7e4-3615-4a26-9895-9d0a51595488
+            - 0ad8e0ce-c115-4695-b09e-969f548368bd
+            - 0d51b9dd-c3ac-40ba-bdb0-11e88fb6bfbc
+            - 0fe75314-3750-4a70-a38d-d68b29967573
+            - 1a220bf9-74c9-43cc-8021-81cf40ccedfc
