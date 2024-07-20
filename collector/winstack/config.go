@@ -3,6 +3,8 @@
 
 package winstack
 
+var Name = "WinStackCollector"
+
 // WinStack 考虑到采集任务运行时间可能比较长，在这里仅支持50并发量的 WinStack 任务运行
 // 如后续机器性能不足的情况下需要调小 Concurrency 数值
 type WinStack struct {

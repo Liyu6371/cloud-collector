@@ -18,8 +18,9 @@ type Config struct {
 }
 
 type CloudCollectTask struct {
-	WinStackTask *winstack.WinStack `yaml:"win_stack"`
-	VMWareTask   *vmware.VMWareTask `yaml:"vmware_task"`
+	WinStackTask *winstack.WinStack  `yaml:"win_stack"`
+	VMWare       *vmware.VMCollector `yaml:"vm_ware"`
+	//VMWareTask   *vmware.VMWareTask `yaml:"vmware_task"`
 }
 
 func ParseConfig(p string) (*Config, error) {

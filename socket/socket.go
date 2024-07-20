@@ -60,9 +60,6 @@ func (g *GseSocket) StartServer(c context.Context) {
 	<-g.ctx.Done()
 	g.wg.Wait()
 
-	//ctx, cancel := context.WithCancel(c)
-	//g.ctx = ctx
-	//g.cancel = cancel
 }
 
 // startGseServer 启动GSE服务，并且监听 MsgQueue 等待数据上报

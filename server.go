@@ -67,4 +67,5 @@ func (svc *CloudCollectorService) runServer(server Server, name string) {
 		defer svc.wg.Done()
 		s.StartServer(svc.ctx)
 	}(server)
+	logger.Info("server %s is running", name)
 }
