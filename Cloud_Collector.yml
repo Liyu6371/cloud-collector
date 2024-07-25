@@ -46,6 +46,7 @@ cloud_collect_task:
     concurrency: 50
     clouds:
       - id: 1
+        period: 1m
         server: 192.168.104.4
         account: monitoradmin@vsphere.local
         password: 4ce55470704e541378c652f66871b687

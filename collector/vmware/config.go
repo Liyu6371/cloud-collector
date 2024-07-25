@@ -1,6 +1,9 @@
 package vmware
 
-var Name = "VMWareCollector"
+var (
+	Name   = "VMWareCollector"
+	aesKey = "jski2ksuey4xn8fu"
+)
 
 type VMCollector struct {
 	Concurrency int      `yaml:"concurrency"`

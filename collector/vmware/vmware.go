@@ -4,9 +4,13 @@ import (
 	"cloud-collector/logger"
 	"context"
 	"sync"
+	"time"
 )
 
-var wg sync.WaitGroup // goroutine 控制
+var (
+	wg     sync.WaitGroup    // goroutine 控制
+	period = time.Minute * 5 // 默认运行周期
+)
 
 func (v *VMCollector) Run(ctx context.Context) {
 	defer logger.Infoln("VMCollector shutting down")
